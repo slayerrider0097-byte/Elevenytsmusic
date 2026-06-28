@@ -60,9 +60,7 @@ _f = "QXJ0aXN0Ym90cw=="
 
 
 def _decode_f():
-    decoded = base64.b64decode(_f).decode("utf-8")
-    return f"✦ {decoded} ✦"
-
+    return "❤️ Powered By ARUSH ❤️"
 
 def trim_to_width(text: str, font, max_w: int) -> str:
 
