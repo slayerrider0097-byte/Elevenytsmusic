@@ -43,8 +43,8 @@ class Config:
         self.SESSION3: str = getenv("STRING_SESSION3", "")
 
         # Support Links
-        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/elevenytsmusic")
-        self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/elevenytschats")
+        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/ArushUpdates")
+        self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/ArushSupport")
 
         # Excluded Chats
         self.EXCLUDED_CHATS: List[int] = self._parse_excluded_chats()
@@ -59,7 +59,7 @@ class Config:
         # ArtistBots API @ArtistApibot
         self.ARTISTBOTS_API_URL: str = getenv("ARTISTBOTS_API_URL", "")
         self.ARTISTBOTS_KEY: str = getenv("ARTISTBOTS_KEY", "")
-        self.ENABLE_API: bool = self._str_to_bool(getenv("ENABLE_API", "True"))
+        self.ENABLE_API: bool = self._str_to_bool(getenv("ENABLE_API", "False"))
         self.ENABLE_COOKIES_FALLBACK: bool = self._str_to_bool(getenv("ENABLE_COOKIES_FALLBACK", "True"))
         self.API_TIMEOUT: int = int(getenv("API_TIMEOUT", "60"))
         self.API_STREAM_TIMEOUT: int = int(getenv("API_STREAM_TIMEOUT", "300"))
@@ -68,9 +68,9 @@ class Config:
         self.COOKIES_URL: List[str] = self._parse_cookies()
 
         # Images
-        self.DEFAULT_THUMB: str = getenv("DEFAULT_THUMB", "https://files.catbox.moe/zlmv6v.png")
-        self.PING_IMG: str = getenv("PING_IMG", "https://files.catbox.moe/zlmv6v.png")
-        self.START_IMG: str = getenv("START_IMG", "https://files.catbox.moe/zlmv6v.png")
+        self.DEFAULT_THUMB: str = getenv("DEFAULT_THUMB", "https://files.catbox.moe/ubz1x1.png")
+        self.PING_IMG: str = getenv("PING_IMG", "https://files.catbox.moe/kpag5m.png")
+        self.START_IMG: str = getenv("START_IMG", "https://files.catbox.moe/wytig4.png")
         self.RADIO_IMG: str = getenv("RADIO_IMG", "https://files.catbox.moe/zlmv6v.png")
         
         # Sticker ID for welcome message
