@@ -36,30 +36,29 @@ PANEL_Y = 0
 
 # Left YouTube Thumbnail
 THUMB_W, THUMB_H = 520, 620
-THUMB_X = 70
-THUMB_Y = 50
+THUMB_X = 45
+THUMB_Y = 175
 
 # Right Side Title
-TITLE_X = 620
-TITLE_Y = 120
+TITLE_X = 640
+TITLE_Y = 145
 
 # Meta Text
-META_Y = 190
+META_Y = 225
 
 # Progress Bar
-BAR_X = 620
-BAR_Y = 280
+BAR_X = 640
+BAR_Y = 315
 
-BAR_RED_LEN = 180
-BAR_TOTAL_LEN = 520
+BAR_RED_LEN = 250
+BAR_TOTAL_LEN = 540
 
 # Control Icons
 ICONS_W, ICONS_H = 420, 45
-ICONS_X = 700
-ICONS_Y = 360
+ICONS_X = 690
+ICONS_Y = 405
 
 MAX_TITLE_WIDTH = 560
-
 _f = "QXJ0aXN0Ym90cw=="
 
 
@@ -170,7 +169,7 @@ class Thumbnail:
                 font=self.signature_font
             )
 
-            thumb = base.resize((520, 620))
+            thumb = base.resize((THUMB_W, THUMB_H))
 
             tmask = Image.new(
                 "L",
@@ -186,7 +185,7 @@ class Thumbnail:
 
             bg.paste(
     thumb,
-    (70, 50),
+    (THUMB_X, THUMB_Y),
     tmask
             )
 
