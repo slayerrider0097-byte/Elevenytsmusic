@@ -23,42 +23,40 @@ from PIL import (
     ImageDraw,
     ImageEnhance,
     ImageFilter,
-    ImageFont
+    ImageFont,
+    ImageOps
 )
 
 from Elevenyts import config
 from Elevenyts.helpers import Track
 
 
-PANEL_W, PANEL_H = 1030, 610
+PANEL_W, PANEL_H = 1280, 720
 PANEL_X = 0
 PANEL_Y = 0
 
-# Left YouTube Thumbnail
-THUMB_W, THUMB_H = 520, 620
+THUMB_W = 520
+THUMB_H = 620
 THUMB_X = 45
-THUMB_Y = 175
+THUMB_Y = 50
 
-# Right Side Title
-TITLE_X = 640
-TITLE_Y = 145
+TITLE_X = 650
+TITLE_Y = 105
 
-# Meta Text
-META_Y = 225
+META_Y = 170
 
-# Progress Bar
-BAR_X = 640
-BAR_Y = 315
+BAR_X = 650
+BAR_Y = 250
 
 BAR_RED_LEN = 250
 BAR_TOTAL_LEN = 540
 
-# Control Icons
-ICONS_W, ICONS_H = 420, 45
+ICONS_W = 420
+ICONS_H = 45
 ICONS_X = 690
-ICONS_Y = 405
+ICONS_Y = 355
 
-MAX_TITLE_WIDTH = 560
+MAX_TITLE_WIDTH = 500
 _f = "QXJ0aXN0Ym90cw=="
 
 
@@ -169,7 +167,12 @@ class Thumbnail:
                 font=self.signature_font
             )
 
-            thumb = base.resize((THUMB_W, THUMB_H))
+            thumb = ImageOps.fit(
+    base,
+    (THUMB_W, THUMB_H),
+    method=Image.LANCZOS,
+    centering=(0.5, 0.5)
+)
 
             tmask = Image.new(
                 "L",
