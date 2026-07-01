@@ -35,8 +35,19 @@ if sys.platform != "win32":
     except Exception:
         pass
 
-from Elevenyts import (tune, app, config, db,
-                   logger, stop, userbot, yt)
+from Elevenyts import (
+    app,
+    config,
+    db,
+    logger,
+    stop,
+    userbot,
+    yt,
+)
+
+from Elevenyts.core.calls import TgCall
+
+tune = TgCall()
 from Elevenyts.plugins import all_modules
 
 
