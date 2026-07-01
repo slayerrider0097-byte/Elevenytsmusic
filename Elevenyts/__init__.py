@@ -90,11 +90,6 @@ queue = Queue()
 from Elevenyts.helpers._preload import PreloadManager
 preload = PreloadManager()
 
-# Initialize call handler
-from Elevenyts.core.calls import TgCall
-tune = TgCall()
-
-
 async def stop() -> None:
     """
     Gracefully shutdown the bot and all its components.
